@@ -3,6 +3,7 @@ import ErrorFlow from "./ErrorFlow"
 import ErrorFlowPreview from "./ErrorFlowPreview"
 import Sidebar from "./Sidebar"
 import { Button, CheckIcon, Chevron, LoaderGlyph } from "./LoaderPrimitives"
+import { assetUrl } from "./assets"
 
 type RunMode = "standard" | "error"
 
@@ -578,7 +579,7 @@ function NormalFlowPreview({ onClose }: { onClose: () => void }) {
     >
       <div className="error-preview__background" aria-hidden="true">
         <img
-          src="/assets/chat-background/aacac.svg"
+          src={assetUrl("assets/chat-background/aacac.svg")}
           alt=""
           width="1387"
           height="358"
@@ -719,7 +720,7 @@ export default function App() {
         data-node-id="8008:1880"
       >
         <img
-          src="/assets/chat-background/aacac.svg"
+          src={assetUrl("assets/chat-background/aacac.svg")}
           alt=""
           width="1387"
           height="358"
@@ -775,7 +776,7 @@ export default function App() {
                   aria-label="Add"
                 >
                   <img
-                    src="/assets/composer-icons/add.svg"
+                    src={assetUrl("assets/composer-icons/add.svg")}
                     alt=""
                     aria-hidden="true"
                   />
@@ -783,30 +784,36 @@ export default function App() {
                 <button type="button" className="source-pill">
                   <span className="source-pill__marks" aria-hidden="true">
                     <span className="source-mark source-mark--word">
-                      <img src="/assets/composer-icons/word.svg" alt="" />
+                      <img
+                        src={assetUrl("assets/composer-icons/word.svg")}
+                        alt=""
+                      />
                     </span>
                     <span className="source-mark source-mark--data">
-                      <img src="/assets/composer-icons/schema.svg" alt="" />
+                      <img
+                        src={assetUrl("assets/composer-icons/schema.svg")}
+                        alt=""
+                      />
                     </span>
                     <span className="source-mark source-mark--count">+5</span>
                   </span>
                   <span>Sales Data Pool</span>
                   <img
                     className="composer-chevron"
-                    src="/assets/composer-icons/source-chevron.svg"
+                    src={assetUrl("assets/composer-icons/source-chevron.svg")}
                     alt=""
                     aria-hidden="true"
                   />
                 </button>
                 <button type="button" className="tools-pill" aria-label="Tools">
                   <img
-                    src="/assets/composer-icons/tools.svg"
+                    src={assetUrl("assets/composer-icons/tools.svg")}
                     alt=""
                     aria-hidden="true"
                   />
                   <img
                     className="composer-chevron"
-                    src="/assets/composer-icons/tools-chevron.svg"
+                    src={assetUrl("assets/composer-icons/tools-chevron.svg")}
                     alt=""
                     aria-hidden="true"
                   />
@@ -816,14 +823,14 @@ export default function App() {
               <div className="question-composer__right">
                 <button type="button" aria-label="Preview data">
                   <img
-                    src="/assets/composer-icons/data-preview.svg"
+                    src={assetUrl("assets/composer-icons/data-preview.svg")}
                     alt=""
                     aria-hidden="true"
                   />
                 </button>
                 <button type="button" aria-label="Data information">
                   <img
-                    src="/assets/composer-icons/data-info.svg"
+                    src={assetUrl("assets/composer-icons/data-info.svg")}
                     alt=""
                     aria-hidden="true"
                   />
@@ -836,7 +843,7 @@ export default function App() {
                     aria-label="Send question"
                   >
                     <img
-                      src="/assets/composer-icons/send.svg"
+                      src={assetUrl("assets/composer-icons/send.svg")}
                       alt=""
                       aria-hidden="true"
                     />
@@ -857,7 +864,7 @@ export default function App() {
                     aria-label="Start voice input"
                   >
                     <img
-                      src="/assets/composer-icons/voice.svg"
+                      src={assetUrl("assets/composer-icons/voice.svg")}
                       alt=""
                       aria-hidden="true"
                     />

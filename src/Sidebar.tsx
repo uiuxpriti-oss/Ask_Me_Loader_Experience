@@ -1,7 +1,8 @@
 import { useState } from "react"
+import { assetUrl } from "./assets"
 
-const assetPath = "/assets/sidebar"
-const mobileAssetPath = "/assets/mobile-sidebar"
+const assetPath = assetUrl("assets/sidebar")
+const mobileAssetPath = assetUrl("assets/mobile-sidebar")
 
 const mobileNavItems = [
   ["New Analysis", "878cc.svg"],
@@ -62,9 +63,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <header
-        className={`mobile-header ${open ? "mobile-header--open" : ""}`}
-      >
+      <header className={`mobile-header ${open ? "mobile-header--open" : ""}`}>
         <button
           className={`mobile-menu-toggle ${
             open ? "mobile-menu-toggle--open" : ""
@@ -85,9 +84,9 @@ export default function Sidebar() {
             />
           ) : (
             <span className="mobile-menu-icon" aria-hidden="true">
-              <img src="/assets/6bb1d.svg" alt="" />
-              <img src="/assets/e1134.svg" alt="" />
-              <img src="/assets/6bb1d.svg" alt="" />
+              <img src={assetUrl("assets/6bb1d.svg")} alt="" />
+              <img src={assetUrl("assets/e1134.svg")} alt="" />
+              <img src={assetUrl("assets/6bb1d.svg")} alt="" />
             </span>
           )}
         </button>
@@ -97,7 +96,7 @@ export default function Sidebar() {
           type="button"
           aria-label="More options"
         >
-          <img src="/assets/33d79.svg" alt="" aria-hidden="true" />
+          <img src={assetUrl("assets/33d79.svg")} alt="" aria-hidden="true" />
         </button>
         <span className="mobile-header__fade" aria-hidden="true" />
       </header>
@@ -234,9 +233,7 @@ export default function Sidebar() {
                         }
                         type="button"
                         aria-label={
-                          pinned
-                            ? `Unpin ${title}`
-                            : `Options for ${title}`
+                          pinned ? `Unpin ${title}` : `Options for ${title}`
                         }
                       >
                         <img

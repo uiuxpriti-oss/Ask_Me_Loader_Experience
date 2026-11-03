@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import ErrorFlow from "./ErrorFlow"
+import { assetUrl } from "./assets"
 
 const errorDuration = 12.6
 
@@ -47,7 +48,7 @@ export default function ErrorFlowPreview({ onClose }: { onClose: () => void }) {
     >
       <div className="error-preview__background" aria-hidden="true">
         <img
-          src="/assets/chat-background/aacac.svg"
+          src={assetUrl("assets/chat-background/aacac.svg")}
           alt=""
           width="1387"
           height="358"
