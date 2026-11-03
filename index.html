@@ -10,6 +10,11 @@
   <body>
     <!-- figma:body-start -->
     <div id="root"></div>
+    <script>
+      if (window.location.hostname.endsWith("github.io")) {
+        window.location.replace("./docs/");
+      }
+    </script>
     <script type="module" src="/src/main.tsx"></script>
     <!-- figma:body-end -->
   </body>
