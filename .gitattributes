@@ -147,3 +147,6 @@
 
 # Store deploy-ready Pages images directly in Git.
 docs/**/*.png -filter -diff -merge -text
+
+# Store downloadable Pages documents directly in Git.
+docs/**/*.pdf -filter -diff -merge -text
